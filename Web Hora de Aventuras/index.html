@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+    <img class="imagen_banner" src="imagenes\banner.png">
+    <div class="fondo_gris"></div>
+    <div class="a">
+        <div class="boton_posicion1"> <a href="https://google.es"><button type="button"  class="boton1">Inicio</button></a></div> 
+        <div class="boton_posicion2"> <a href="https://google.es"><button type="button"  class="boton2">Tienda</button></a></div> 
+        <div class="boton_posicion3"> <a href="https://google.es"><button type="button"  class="boton3">Foro</button></a></div> 
+        <div class="boton_posicion4"> <a href="formulario.html"><button type="button"  class="boton4">Login</button></a></div> 
+    </div>
+        <div class="texto1"><p class="texto11">🎁 Nuevos Episodios El 1 De Abril 🎁</p></div>
+        <div class="titulo"><h1 class="texto_titulo">Épicas Aventuras De Finn Y Jake En El Reino De Ooo</h1></div>
+        <div class="titulo2"><h1 class="texto_titulo2">Las Mejores Historias De La Televisión</h1></div>
+    <div>
+        <div class="video"><iframe width="1280" height="720" src="https://www.youtube.com/embed/BPOlSYwL3ZA?si=NGSz8fjM62lNbzho" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></iframe></div>
+    </div>
+    <div class="general1">
+        <div class="rectangulo1"></div>
+        <div class="imagen1"><img src="imagenes\LOGO.png" height="100px" width="100px"></div>
+        <div><h1 class="textorectangulo1">Hora de Aventuras</h1></div>
+        <div><h1 class="textorectangulo11">¡Mira Los Nuevos Episodios Cuando Quieras!</h1></div>
+        <div><img id="boton-copiar" class="link1" src="imagenes\link.png"></div>
+    </div>
+    <div class="general2">
+        <div class="rectangulo1"></div>
+        <div class="imagen1"><img src="imagenes\LOGO.png" height="100px" width="100px"></div>
+        <div><h1 class="textorectangulo1">Hora de Aventuras</h1></div>
+        <div><h1 class="textorectangulo11">¡Mira Los Nuevos Episodios Cuando Quieras!</h1></div>
+        <div><img id="boton-copiar" class="link1" src="imagenes\link.png"></div>
+    </div>
+    <div>
+        <div class="FondoRosa"></div>
+        <div><h1 class="t_aventura">¿Estás Listo Para Tu Próxima Aventura?</h1></div>
+        <img class="chicle" src="imagenes\chicle.png">
+        <div><h1 class="t-aventura1">Su piel es rosa claro, tiene un gran vestido rosa, una larga melena de pelo (hecho de chicle) que le llega a la altura de las rodillas, con una corona de oro y una joya turquesa. </h1></div>
+    </div>
+    <div class="new">
+        <div class="rectangulo2"></div>
+        <div class="imagen1"><img src="imagenes\LOGO.png" height="100px" width="100px"></div>
+        <div><h1 class="textorectangulo1">Suscribete a la Newsletter</h1></div>
+        <div><a href="https://google.es"> <img class="mail" src="imagenes\mail.png"></a></div>
+        <div class="container">
+            <form>
+              <input type="text" id="nombre" name="nombre" placeholder="Correo Electrónico">
+            </form>
+          </div>
+    </div>
+    <img class="marceline2" src="imagenes\marceline2.webp" >
+    <div class="fredes">
+        <h1 class="redes" >Redes Sociales</h1>
+        <p class="textoredes">Síguenos en nuestras redes sociales para estar al tanto de todas las novedades y promociones.</p>
+        <h1 class="redes1" >Recursos</h1>
+        <p class="textoredes1">Contacta</p>
+        <a href="https://discord.com"><img class="dis" src="imagenes\discord.png"></a>
+        <a href="https://discord.com"><img class="twi" src="imagenes\twitter.png"></a>
+        <a href="https://discord.com"><img class="pin" src="imagenes\pinterest.png"></a>
+    </div>
+    <img class="hielo" src="imagenes\hielo.png">
+    <h1 class="textofooter1">Todos Los Derechos Reservados De Copyright</h1>
+    <h1 class="textofooter2">Desarrollado Por</h1>
+    <h1 class="textofooter3">German Romo</h1>
+
+    <div class="footer"></div>
+    <img class="llama" src="imagenes\llama.webp">
+    
+<script>
+document.getElementById('boton-copiar').addEventListener('click', function() {
+    var texto = "google.com";
+    var tempInput = document.createElement("input");
+    tempInput.value = texto;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand("copy");
+    document.body.removeChild(tempInput);
+});
+</Script>
+</body>
+</html>

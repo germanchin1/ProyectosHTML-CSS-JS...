@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+    <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+    <img class="imagen_banner" src="imagenes\banner.png">
+    <div class="fondo_gris2"></div>
+    <div class="botones">
+        <div class="boton_posicion1"> <a href="https://google.es"><button type="button"  class="boton1">Inicio</button></a></div> 
+        <div class="boton_posicion2"> <a href="https://google.es"><button type="button"  class="boton2">Tienda</button></a></div> 
+        <div class="boton_posicion3"> <a href="https://google.es"><button type="button"  class="boton3">Foro</button></a></div> 
+        <div class="boton_posicion4"> <a href="index.html"><button type="button"  class="boton4">Login</button></a></div> 
+    </div>
+    <div class="titulo4"><h1 class="texto_titulo">¡Formulario Hora De Aventuras!</h1></div>
+
+    <div>
+        <div class="FondoRosa2">  
+            <div class="titulo3"><h1 class="texto_titulo">Escribe Tus Datos Aquí</h1></div>
+<div class="form_div">
+    <img class="banana1" src="imagenes\banana.png" height="650px" width="278px">
+    <div id="formulario">
+        <form id="miFormulario">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+            
+            <label for="fecha_nacimiento">Fecha de Nacimiento:</label>
+            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+            
+            <label for="altura">Altura (en cm):</label>
+            <input type="number" id="altura" name="altura" required>
+            
+               
+            <div id="genero-container">
+                <label>Género:</label>
+                <div id="botones-genero">
+                    <button type="button" class="genero-button" onclick="setGenero('hombre')">Hombre</button>
+                    <button type="button" class="genero-button" onclick="setGenero('mujer')">Mujer</button>
+                </div>
+                <input type="hidden" id="genero" name="genero">
+            </div>
+    
+            <input type="submit" value="Enviar" onclick="enviarFormulario()">
+        </form>
+    </div>
+</div>
+</div>
+
+    <script>
+        // Función para establecer el género
+        function setGenero(genero) {
+            document.getElementById('genero').value = genero;
+        }
+    
+        // Función para enviar el formulario
+        function enviarFormulario() {
+            // Obtener los valores de los campos del formulario
+            const nombre = document.getElementById('nombre').value;
+            const apellido = document.getElementById('apellido').value;
+            const fechaNacimiento = document.getElementById('fecha_nacimiento').value;
+            const altura = document.getElementById('altura').value;
+            const genero = document.getElementById('genero').value;
+    
+            // Mostrar los valores recopilados
+            alert(`Nombre: ${nombre}\nApellido: ${apellido}\nFecha de Nacimiento: ${fechaNacimiento}\nAltura: ${altura} cm\nGénero: ${genero}`);
+        }
+    </script>
+    
+</body>
+</html>
