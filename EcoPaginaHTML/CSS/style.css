@@ -1,0 +1,414 @@
+body {
+  background-color: white;
+
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.example {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+header {
+  margin-left: 10px;
+  height: 150px;
+  width: 98%;
+  background-color: #347928;
+  border-radius: 6px;
+  -webkit-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+}
+
+.logo {
+  margin-left: 20px;
+  margin-top: 25px;
+}
+
+nav {
+  height: 30px;
+}
+
+.grid-container {
+  border-radius: 6px;
+  margin-left: 12px;
+  margin-top: 20px;
+  width: 97%;
+  height: 750px;
+  display: grid;
+  grid-template-columns: 16% 16% 16% 16% 16% 17%;
+  grid-template-rows: 100 600px 150px 50px 40px 300px;
+  gap: 10px;
+  background-color: #347928;
+  padding: 10px;
+  -webkit-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+}
+
+.grid-container>div {
+  background-color: #e9f0e7;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  border-radius: 5px;
+}
+
+.item1 {
+  grid-column: 1 / 7;
+  width: 100%;
+}
+
+.green {
+  font-family: "Nerko One", cursive;
+  color: #347928;
+  font-size: 70px;
+}
+
+p {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #347928;
+  font-size: 20px;
+}
+
+.img1 {
+  margin-top: 65px;
+}
+
+.titheader {
+  margin-left: 3%;
+  margin-top: 20px;
+  font-family: "Nerko One", cursive;
+  color: #e9f0e7;
+  position: absolute;
+  font-size: 80PX;
+}
+
+.ecoLogo {
+  margin-left: 1500px;
+  margin-top: 10px;
+  width: 230px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  height: 60px;
+  background-color: #347928;
+  margin-left: 10px;
+  margin-top: 15px;
+  border-radius: 5px;
+  width: 98.1%;
+  gap: 100px;
+  -webkit-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+}
+
+.links {
+  color: #e9f0e7;
+  font-family: "Nerko One", cursive;
+  margin-left: 3px;
+  margin-right: 7px;
+}
+
+.links1 {
+  font-family: "Nerko One", cursive;
+  color: #e9f0e7;
+  margin-left: 3px;
+  margin-right: 7px;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+a {
+  position: relative;
+  display: block;
+  cursor: pointer;
+}
+
+a:before,
+a:after {
+  content: '';
+  position: absolute;
+  width: 0%;
+  height: 3px;
+  top: 80%;
+  margin-top: 0px;
+  background: #e9f0e7;
+}
+
+a:before {
+  left: -2.5px;
+}
+
+a:after {
+  right: 2.5px;
+  background: #e9f0e7;
+  transition: width 0.8s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+a:hover:before {
+  background: #e9f0e7;
+  width: 100%;
+  transition: width 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+a:hover:after {
+  background: transparent;
+  width: 100%;
+  transition: 0s;
+}
+
+.parent {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  height: 650px;
+  margin-left: 16px;
+  width: 98%;
+  margin-top: 20px;
+  background-color: #347928;
+  border-radius: 5px;
+  -webkit-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+}
+
+.child {
+  background-color: #e9f0e7;
+  text-align: center;
+  margin-left: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+  font-size: 30px;
+  border-radius: 5px;
+  font-family: "Nerko One", cursive;
+  color: #347928;
+}
+
+.parent2 {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  height: 670px;
+  margin-left: 16px;
+  width: 98%;
+  margin-top: 20px;
+  background-color: #347928;
+  border-radius: 5px;
+  -webkit-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+}
+
+.child2 {
+  background-color: #e9f0e7;
+  text-align: center;
+  margin-right: 12px;
+  margin-left: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+  font-size: 30px;
+  border-radius: 5px;
+  font-family: "Nerko One", cursive;
+  color: #347928;
+}
+
+footer {
+  align-items: center;
+  width: 98%;
+  background-color: #347928;
+  height: 60px;
+  margin-left: 20px;
+  border-radius: 5px;
+  -webkit-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+  margin-bottom: 15px;
+  text-align: center;
+  align-items: center;
+}
+
+.tfooter {
+  font-family: "Nerko One", cursive;
+  color: #e9f0e7;
+  padding: 10px;
+
+}
+
+.parent4 {
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  height: 585px;
+  margin-left: 16px;
+  width: 98%;
+  margin-top: 20px;
+  background-color: #347928;
+  border-radius: 5px;
+  -webkit-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+}
+
+.child3 {
+  background-color: #e9f0e7;
+  text-align: center;
+  margin-right: 12px;
+  margin-left: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+  font-size: 30px;
+  border-radius: 5px;
+  font-family: "Nerko One", cursive;
+  color: #347928;
+  height: 520px;
+}
+
+.parent5 {
+  display: grid;
+  grid-template-columns: 16% 16% 16% 16% 16% 16%;
+  height: 880PX;
+  margin-left: 16px;
+  width: 98%;
+  margin-top: 20px;
+  background-color: #347928;
+  border-radius: 5px;
+  -webkit-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+}
+
+.child4 {
+  background-color: #e9f0e7;
+  text-align: center;
+  margin-right: 12px;
+  margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+  font-size: 30px;
+  border-radius: 5px;
+  font-family: "Nerko One", cursive;
+  color: #347928;
+  height: 220px;
+}
+
+.tabla {
+  width: 1900px;
+  display: grid;
+  grid-template-columns: 17% 17% 17% 17% 17% 17%;
+  height: 670px;
+  margin-left: 20px;
+  width: 1800px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+.parent0 {
+  display: grid;
+  grid-template-columns: 100%;
+  height: 530px;
+  margin-left: 16px;
+  width: 98%;
+  margin-top: 20px;
+  background-color: #347928;
+  border-radius: 5px;
+  -webkit-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+}
+
+.child0 {
+  background-color: #e9f0e7;
+  text-align: left;
+  margin-left: 16px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 20px;
+  font-size: 30px;
+  border-radius: 5px;
+  font-family: "Nerko One", cursive;
+  color: #347928;
+  height: 200px;
+  margin-right: 18px;
+}
+
+.personas {
+  width: 1000px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: #347928;
+  font-size: 20px;
+}
+
+.fimg1 {
+  position: absolute;
+  width: 200px;
+  margin-top: 30px;
+  margin-left: 1500px;
+}
+
+.mimg1 {
+  position: absolute;
+  width: 200px;
+  margin-top: -510px;
+  margin-left: 1500px;
+}
+
+.form-container {
+  background-color: #347928;
+  padding: 20px;
+  width: 96%;
+  margin-top: 20px;
+  margin-left: 20px;
+  color: #e9f0e7;
+  border-radius: 5px;
+  -webkit-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 0px 0px rgba(0, 0, 0, 0.75);
+}
+
+.label {
+  color: #e9f0e7;
+}
+
+.input, .select, .textarea {
+  width: 99%;
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #e9f0e7;
+  background-color: #e9f0e7;
+  color: #347928;
+  border-radius: 4px;
+}
+
+.select {
+  width: 1830px;
+}
+
+.button {
+  background-color: #e9f0e7;
+  color: #347928;
+  padding: 10px;
+  width: 100%;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button.reset {
+  margin-top: 10px;
+}
+
+
