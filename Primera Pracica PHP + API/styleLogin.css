@@ -1,0 +1,79 @@
+:root {
+  --primary: #E1933B;
+  --secondary: #333;
+  --accent: #D40C0C;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Averia Libre", sans-serif;
+  background-color: rgb(245, 245, 245);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-container {
+  background-color: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  width: 350px;
+}
+
+h1 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--primary);
+  font-weight: bold;
+}
+
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid var(--primary);
+  background-color: var(--secondary);
+  color: white;
+  font-size: 16px;
+  outline: none;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+  background-color: var(--primary);
+  color: var(--secondary);
+  border-color: var(--accent);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--primary);
+  color: var(--secondary);
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+button:hover {
+  background-color: var(--accent);
+  color: white;
+}

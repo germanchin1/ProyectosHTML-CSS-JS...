@@ -1,0 +1,194 @@
+:root {
+  --primary: #a0b1d7;
+  --secondary: ;
+  --accent: #ba681c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Averia Libre", sans-serif;
+  background-color: rgb(245, 245, 245);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.header,
+.header2 {
+  width: 96%;
+  height: 100px;
+  margin-top: 15px;
+  background-color: white;
+  position: absolute;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.header2 {
+  height: 50px;
+  margin-top: 130px;
+}
+
+.form-container,
+.pokemon-registrados {
+  flex: 0 0 60%;
+  background: var(--secondary);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+.pokemon-registrados {
+  position: relative;
+  flex: 0 0 40%;
+  overflow-y: auto;
+  margin-left: -60px;
+  margin-top: 210px;
+}
+
+h1, h2 {
+  text-align: center;
+  color: var(--primary);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+form input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid var(--primary);
+  border-radius: 8px;
+  background-color: var(--secondary);
+  color: white;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+form input:focus {
+  border-color: var(--primary);
+  background-color: var(--primary);
+  color: var(--secondary);
+}
+
+button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: var(--primary);
+  color: var(--secondary);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+button:hover {
+  background-color: var(--accent);
+  color: rgb(70, 12, 12);
+}
+
+.habilidades {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 0;
+  font-size: 16px;
+  color: var(--primary);
+}
+
+.habilidades label {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.pokemon {
+  background: var(--primary);
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  width: 100%;
+  color: var(--secondary);
+}
+
+.pokemon strong {
+  color: var(--accent);
+}
+
+.h1_header{
+  margin-top: 30px;
+  color: var(--primary);
+}
+
+.navbar {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: var(--primary);
+}
+
+.navbar a {
+  color: var(--secondary);
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.navbar a:hover {
+  background-color: var(--accent);
+  color: white;
+}
+
+.blastoise{
+  width: 450px;
+  height: 450px;
+  position: relative;
+  margin-top: 200px;
+}
+
+.aa{
+  width: 4000px;
+  margin-left: 100px;
+}
+
+/* Estilo para los botones de radio */
+.filtro-tipo {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.tipo-label {
+  display: inline-block;
+  margin-right: 15px;
+  padding: 5px 10px;
+  background-color: var(--primary);
+  border-radius: 5px;
+  color: var(--secondary);
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.tipo-label input {
+  margin-right: 5px;
+}
+
+.tipo-label:hover {
+  background-color: var(--accent);
+  color: white;
+}

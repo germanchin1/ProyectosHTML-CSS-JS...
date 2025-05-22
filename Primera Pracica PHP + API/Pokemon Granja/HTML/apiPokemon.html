@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Buscar Pokémon</title>
+  <link rel="stylesheet" href="..\CSS\apiStyle.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Averia+Libre:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="header">
+    <h1 class="h1_header">Pokédex Interactiva</h1>
+  </div>
+
+  <div class="header2">
+    <nav class="navbar">
+      <a href="index.html">Pokemon en LocalStorage</a>
+      <a href="apiPokemon.html">API</a>
+      <a href="FiltradorDeTipos.html">Guardados y Filtrados por tipo</a>
+    </nav>
+  </div>
+
+  <div class="container">
+    <div class="form-container">
+      <h2>Buscar Pokémon</h2>
+      <form onsubmit="event.preventDefault()">
+        <input type="text" id="pokemonInput" placeholder="Nombre del Pokémon" />
+        <button type="button" id="searchBtn">Buscar</button>
+        <button id="guardarApiBtn" type="button">Guardar Pokémon</button>
+      </form>
+    </div>
+
+    <div class="pokemon-registrados" id="pokemonGrid">
+      <p>Busca un Pokémon para ver sus datos.</p>
+    </div>
+  </div>
+
+  <img src="..\MEDIA\img3.png" class="bulbasaur">
+  <script src="..\JS\app.js"></script>
+</body>
+</html>

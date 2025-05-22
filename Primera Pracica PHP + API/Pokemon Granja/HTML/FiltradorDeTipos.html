@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Pokémon Guardados</title>
+  <link rel="stylesheet" href="../CSS/filtadorStyle.css">
+  <link href="https://fonts.googleapis.com/css2?family=Averia+Libre&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="header">
+    <h1 class="h1_header">Pokémon Guardados desde otras páginas</h1>
+  </div>
+
+  <div class="header2">
+    <nav class="navbar">
+      <a href="index.html">Pokemon en LocalStorage</a>
+      <a href="apiPokemon.html">API</a>
+      <a href="FiltradorDeTipos.html">Guardados y Filtrados por tipo</a>
+    </nav>
+  </div>
+
+  <div class="aa">
+    <div class="container">
+      <div class="pokemon-registrados" id="pokemonGuardados">
+        <h2>Pokémon Guardados</h2>
+
+        <!-- Filtro por tipo usando radio buttons -->
+        <div class="filtro-tipo">
+          <p>Filtrar por tipo:</p>
+          <label class="tipo-label">
+            <input type="radio" name="tipo" value="Fuego" id="fuego"> Fuego
+          </label>
+          <label class="tipo-label">
+            <input type="radio" name="tipo" value="Lucha" id="lucha"> Lucha
+          </label>
+          <label class="tipo-label">
+            <input type="radio" name="tipo" value="Fantasma" id="fantasma"> Fantasma
+          </label>
+          <label class="tipo-label">
+            <input type="radio" name="tipo" value="Veneno" id="veneno"> Veneno
+          </label>
+          <!-- Agrega más opciones de tipos según sea necesario -->
+        </div>
+
+        <p id="vacioMensaje">No hay Pokémon guardados todavía.</p>
+      </div>
+    </div>
+  </div>
+
+  <img src="..\MEDIA\img4.png" class="blastoise">
+
+  <script>
+    const contenedor = document.getElementById('pokemonGuardados');
+    const mensajeVacio = document.getElementById('vacioMensaje');
+
+    // Obtenemos los pokemons del localStorage
+    const pokemons = JSON.parse(localStorage.getItem('pokemonsGuardadosParaOtraPagina')) || [];
+
+    // Función para mostrar los Pokémon en la página
+    function mostrarPokemons(pokemonsFiltrados) {
+      contenedor.innerHTML = `
+        <h2>Pokémon Guardados</h2>
+        <div class="filtro-tipo">
+          <p>Filtrar por tipo:</p>
+          <label class="tipo-label">
+            <input type="radio" name="tipo" value="Fuego" id="fuego"> Fuego
+          </label>
+          <label class="tipo-label">
+            <input type="radio" name="tipo" value="Lucha" id="lucha"> Lucha
+          </label>
+          <label class="tipo-label">
+            <input type="radio" name="tipo" value="Fantasma" id="fantasma"> Fantasma
+          </label>
+          <label class="tipo-label">
+            <input type="radio" name="tipo" value="Veneno" id="veneno"> Veneno
+          </label>
+        </div>
+      `;
+
+      if (pokemonsFiltrados.length > 0) {
+        mensajeVacio.style.display = 'none';
+        pokemonsFiltrados.forEach(p => {
+          const div = document.createElement('div');
+          div.className = 'pokemon';
+          div.innerHTML = `
+            <strong>#${p.numero || p.id}</strong>: ${p.nombre}<br>
+            Tipo: ${Array.isArray(p.tipos) ? p.tipos.join(' / ') : p.tipo1 + (p.tipo2 ? ` / ${p.tipo2}` : '')}<br>
+            Habilidad: ${p.habilidad || 'Desconocida'}
+          `;
+          contenedor.appendChild(div);
+        });
+      } else {
+        mensajeVacio.style.display = 'block';
+      }
+    }
+
+    // Mostrar todos los Pokémon al inicio
+    mostrarPokemons(pokemons);
+
+    // Filtrar Pokémon por tipo cuando se selecciona un radio button
+    document.querySelectorAll('input[name="tipo"]').forEach(radio => {
+      radio.addEventListener('change', function() {
+        const tipoSeleccionado = this.value;
+        const pokemonsFiltrados = tipoSeleccionado
+          ? pokemons.filter(p => {
+              if (Array.isArray(p.tipos)) {
+                return p.tipos.includes(tipoSeleccionado);
+              } else {
+                return p.tipo1 === tipoSeleccionado || p.tipo2 === tipoSeleccionado;
+              }
+            })
+          : pokemons;
+
+        mostrarPokemons(pokemonsFiltrados); // Actualizar la vista con los Pokémon filtrados
+      });
+    });
+  </script>
+
+</body>
+</html>

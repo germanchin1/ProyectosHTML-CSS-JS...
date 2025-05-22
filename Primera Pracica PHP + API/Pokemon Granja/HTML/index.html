@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Pokémon</title>
+  <link rel="stylesheet" href="..\CSS\style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Averia+Libre&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="header">
+    <h1 class="h1_header">GESTOR DE POKEMONS LOCALES Y API</h1>
+  </div>
+
+  <div class="header2">
+    <nav class="navbar">
+      <a href="index.html">Pokemon en LocalStorage</a>
+      <a href="apiPokemon.html">API</a>
+      <a href="FiltradorDeTipos.html">Guardados y Filtrados por tipo</a>
+    </nav>
+  </div>
+
+  <div class="container">
+    <div class="form-container">
+      <h1>Registrar Pokémon</h1>
+      <form id="pokemonForm">
+        <input type="number" id="numero" placeholder="Número Pokédex" required>
+        <input type="text" id="nombre" placeholder="Nombre" required>
+        <input type="text" id="tipo1" placeholder="Tipo 1" required>
+        <input type="text" id="tipo2" placeholder="Tipo 2 (opcional)">
+
+        <div class="habilidades">
+          <label><input type="checkbox" name="habilidad" value="Intimidación"> Intimidación</label>
+          <label><input type="checkbox" name="habilidad" value="Potencia"> Potencia</label>
+          <label><input type="checkbox" name="habilidad" value="Pereza"> Pereza</label>
+        </div>
+
+        <button type="submit">Registrar Pokémon</button>
+      </form>
+
+      <button id="guardarBtn">Guardar en otra página</button>
+    </div>
+
+    <div class="pokemon-registrados" id="listaPokemon">
+      <h2>Pokémon Registrados</h2>
+    </div>
+  </div>
+
+  <img src="..\MEDIA\img.png" class="charizard">
+  <img src="..\MEDIA\img2.png" class="charmander">
+
+  <script src="..\JS\LocalStorage.js"></script>
+</body>
+</html>
