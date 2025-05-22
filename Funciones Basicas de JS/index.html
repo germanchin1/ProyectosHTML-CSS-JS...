@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAW JS German Romo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="header" class="header"></div>
+
+
+    <!-- Comparar Textos STRING -->
+    <hr size="5px" color="black"/>
+
+    <div class="CompararTextoString">
+        <input type="text" name="" id="textField1">
+        <input type="text" name="" id="textField2">
+        <img src="media/cruz.png" id="ImagenCambio" class="ImagenCambio" width="70px">
+    </div>
+    <hr size="5px" color="black"/>
+
+
+    <!-- Contar Letras -->
+
+    <div class="ContarLetras">
+        <input type="text" name="" id="ContarLetrasTextField">
+        <p id="contador">Letras</p>
+    </div>
+    <hr size="5px" color="black" />
+
+
+    <!-- Raíz cuadrada -->
+
+    <div class="RaizCuadrada">
+        <input type="text" name="" id="RaizCuadrada">
+        <button id="botonCalcular">calcular</button>
+        <p id="resultado">resultado </p>
+    </div>
+    <hr size="5px" color="black" />
+
+    <!-- Header y Footer -->
+
+
+    <input type="color" id="colorHeader">
+    <input type="color" id="colorFooter">
+    <hr size="5px" color="black" />
+
+    <!-- imagen  -->
+
+    <img src="media/imagen.png" id="imagen">
+    <p>ALTURA</p>
+    <input type="text" id="altura">
+    <p>ANCHO</p>
+    <input type="text" id="ancho">
+    <hr size="5px" color="black"/>
+
+
+    <!-- café -->
+
+    <p>Tipo de bebida</p>
+    <div>
+        Té: <input type="radio" id="te" name="grupo1" value="2"/><br/>
+        Café: <input type="radio" id="cafe" name="grupo1" value="1"/><br />
+    </div>
+    
+    <p>Complemento</p>
+    <div>
+        Sin leche: <input type="radio" id="sin_leche" name="grupo2" value="0"/><br/>
+        Leche: <input type="radio" id="leche" name="grupo2" value="1"/><br/>
+        Sin Lactosa: <input type="radio" id="sin_lactosa" name="grupo2" value="2"/><br/>
+    </div>
+    
+    <p>Extras</p>
+    <div>
+        Sin extras: <input type="radio" id="sin_extras" name="grupo3" value="0"/><br/>
+        Churro: <input type="radio" id="churro" name="grupo3" value="1"/><br/>
+        Porra: <input type="radio" id="porra" name="grupo3" value="3"/><br/>
+    </div>
+    
+    <p>Vaso</p>
+    <div>
+        Vaso Propio: <input type="radio" id="vaso_propio" name="grupo4" value="0"/><br/>
+        Vaso de plástico: <input type="radio" id="vaso_plastico" name="grupo4" value="1"/><br/>
+        De Cristal: <input type="radio" id="cristal" name="grupo4" value="3"/><br/>
+    </div>
+    
+    <div>
+        <p>Precio:</p>
+        <p id="precioMarcador"></p>
+    </div>
+    <hr size="5px" color="black"/>
+
+    <div id="footer" class="footer"></div>
+
+</body>
+<script src="script.js"></script>
+</html>
