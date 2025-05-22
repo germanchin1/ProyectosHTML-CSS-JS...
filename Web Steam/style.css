@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'MiFuente';
+    src: url('motiva-sans/MotivaSansBlack.woff.ttf') format('woff2'),
+     url('motiva-sans/MotivaSansBold.woff.ttf') format('woff2'),
+     url('motiva-sans/MotivaSansExtraBold.ttf') format('woff2'),
+     url('motiva-sans/MotivaSansLight.woff.ttf') format('woff2'),
+     url('motiva-sans/MotivaSansMedium.woff.ttf') format('woff2'),
+     url('motiva-sans/MotivaSansRegular.woff.ttf') format('woff2'),
+     url('motiva-sans/MotivaSansThin.ttf') format('woff2'),
+}
+
+header{
+    color: #c7d5e0 ;
+    height: 100px;
+    text-align: center;
+    padding: 25px;
+}
+body{
+    background-color: #171a21 ;
+    font-family:  MiFuente;
+
+}
+
+.btn-custom {
+    background-color: #171a21;  
+    color: #c7d5e0;              
+    border: 2px solid #171a21; 
+  }
+
+  .btn-custom:hover {
+    background-color: #171a21;
+    border: 2px solid #171a21;  
+
+  }
+
+  .card {
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+  }
+
+  .card:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); 
+  }
+
+a{
+  color: #c7d5e0;
+}
+
